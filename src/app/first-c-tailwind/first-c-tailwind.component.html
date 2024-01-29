@@ -1,13 +1,13 @@
-<div class="border-4 border-black rounded-3xl p-5 m-4" [ngClass]="{
-        'bg-sky-600 text-white': alert.type === 'primary',
-        'bg-red-600 text-white': alert.type === 'danger',
-        'bg-green-200 text-black': alert.type === 'success',
+<div class="alert" [ngClass]="{
+        'alert-primary': alert.type === 'primary',
+        'alert-danger': alert.type === 'danger',
+        'alert-success': alert.type === 'success',
       }">
     {{ alert.msg }}
 </div>
 
 <div class="flex gap-3">
-    <button (click)="alert = {msg: 'hello 1', type: 'primary'}" class="bg-sky-400 px-2 py-1 rounded-xl">primary</button>
-    <button (click)="alert = {msg: 'hello 2', type: 'danger'}" class="bg-sky-400 px-2 py-1 rounded-xl">danger</button>
-    <button (click)="alert = {msg: 'hello 3', type: 'success'}" class="bg-sky-400 px-2 py-1 rounded-xl">success</button>
+    <button class="btn" (click)="alert = {msg: 'hello 1', type: 'primary'}">primary</button>
+    <button class="btn" (click)="alert = {msg: 'hello 2', type: 'danger'}">danger</button>
+    <button class="btn" (click)="alert = {msg: 'hello 3', type: 'success'}">success</button>
 </div>
