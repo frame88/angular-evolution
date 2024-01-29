@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
+type Alert = {
+  msg: string;
+  type: 'primary' | 'danger' | 'success'
+}
 @Component({
   selector: 'app-first-c-tailwind',
   standalone: true,
@@ -9,5 +12,8 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./first-c-tailwind.component.scss']
 })
 export class FirstCTailwindComponent {
-
+  alert: Alert = {
+    msg: 'hello',
+    type: 'primary'
+  }
 }
